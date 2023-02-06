@@ -1,12 +1,17 @@
-﻿// Задача 23
+﻿// задача 19
 
-Console.Write($"Введите число: ");
-int n=int.Parse(Console.ReadLine()!);
-int count=1;
-while (count<=n)
+Console.WriteLine("Введите пятизначное число: ");
+int n= int.Parse(Console.ReadLine()!);
+int a= n/10000;
+int b= n/1000 % 10;
+int c= n/10 % 10;
+int d= n % 10;
+
+if (a==d && b==c)
 {
-    Console.WriteLine($"{Math.Pow(count,3)}");
-
-    if (count<1) Console.Write (", ");
-    count++; 
+    Console.WriteLine($"Введеное пятизначное число {n} является палиндромом");
+}
+else
+{
+    Console.WriteLine($"Введеное число не палиндром");
 }
