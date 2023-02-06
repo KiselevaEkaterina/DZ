@@ -1,19 +1,17 @@
-﻿// программа которая на вход принимает 2 числа и на выходе показывает какое больше и меньше.
+﻿// задача 19
 
-Console.Write("Ведите первое число: ");
-int a=int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите пятизначное число: ");
+int n= int.Parse(Console.ReadLine()!);
+int a= n/10000;
+int b= n/1000 % 10;
+int c= n/10 % 10;
+int d= n % 10;
 
-Console.Write("Ведите второе число: ");
-int b=int.Parse(Console.ReadLine()!);
-
-if (a>b)
-{    
-    Console.WriteLine($"Большее число {a}");
-    Console.WriteLine($"Меньшее число {b}");
-    
+if (a==d && b==c)
+{
+    Console.WriteLine($"Введеное пятизначное число {n} является палиндромом");
 }
 else
 {
-    Console.WriteLine($"Большее число {b}");
-    Console.WriteLine($"Меньшее число {a}");
+    Console.WriteLine($"Введеное число не палиндром");
 }
