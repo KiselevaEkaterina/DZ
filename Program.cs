@@ -1,17 +1,19 @@
-﻿// задача 19
+﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-Console.WriteLine("Введите пятизначное число: ");
-int n= int.Parse(Console.ReadLine()!);
-int a= n/10000;
-int b= n/1000 % 10;
-int c= n/10 % 10;
-int d= n % 10;
-
-if (a==d && b==c)
+void Dellet(String[] args);
 {
-    Console.WriteLine($"Введеное пятизначное число {n} является палиндромом");
+    Console.WriteLine("Введите число: ");
+    int n= int.Parse(Console.ReadLine()!);
+    int sum = 0;
+    int temp = 0;
+    {
+        while (n>0)
+        {
+            temp= n % 10;
+            sum= sum+temp;
+            n= n/10;
+        }
+        Console.WriteLine($"Сумма цифр числа равна {sum}");
+    }
 }
-else
-{
-    Console.WriteLine($"Введеное число не палиндром");
-}
+Dellet(args);
